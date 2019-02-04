@@ -7,13 +7,15 @@ import static org.mockito.Mockito.*;
 
 public class TrainSensorTest {
 
+    TrainSensorImpl trainSensor;
+
     @Before
     public void before() {
-        // TODO Add initializations
+        trainSensor = new TrainSensorImpl(null, null);
     }
 
     @Test
     public void ThisIsAnExampleTestStub() {
-        // TODO Delete this and add test cases based on the issues
+        Assert.assertEquals(10, trainSensor.getSpeedLimit());
     }
 }
