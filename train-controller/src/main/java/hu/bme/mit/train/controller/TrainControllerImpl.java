@@ -2,7 +2,7 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import java.util.Timer;
-import java.util.*;
+import java.util.TimerTask;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -18,7 +18,7 @@ public class TrainControllerImpl implements TrainController {
 				followSpeed();
 			};
 		};
-		timer.scheduleAtFixedRate(tt, 200, 200);
+		timer.scheduleAtFixedRate(tt, 0, 200);
 	}
 
 	@Override
