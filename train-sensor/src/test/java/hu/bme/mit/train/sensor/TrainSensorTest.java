@@ -44,6 +44,7 @@ public class TrainSensorTest {
     public void validSpeedLimit_noAlarm() {
         when(trainController.getReferenceSpeed()).thenReturn(100);
         trainSensor.overrideSpeedLimit(51);
+        Assert.assertEquals(51, trainSensor.getSpeedLimit());
         verify(trainController, times(1)).getReferenceSpeed();
         verify(trainUser, times(1)).setAlarmState(false);
     }
