@@ -18,7 +18,7 @@ public class TrainControllerImpl implements TrainController {
 			public void run() {
 				followSpeed();
 			}
-		}, 0, 100);
+		}, 0, 200);
 	}
 
 	@Override
